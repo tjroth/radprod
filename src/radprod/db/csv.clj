@@ -9,10 +9,19 @@
 
 
 
+(comment
+  (defn process-csv [file]
+    (with-open [rdr (io/reader file)]
+      (doall (csv/parse-csv rdr)))))
 
-(defn process-csv [file]
+
+(defn process-csv
+  [file has-header?]
   (with-open [rdr (io/reader file)]
-    (doall (csv/parse-csv rdr))))
+    ( let [coll (doall (csv/parse-csv rdr))]
+      (if has-header?
+        (drop 1 coll)
+        coll))))
 
 (defn csv-write [filename data]
   (with-open [f (io/writer filename)]

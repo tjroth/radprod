@@ -65,7 +65,6 @@
                :rotation-long (:rotation-long %)
                :rotation-short (:rotation-short %)) coll))
 
-
 (defn csv->schedule
   "Return a Schedule as a map from a csv-file"
   [csv-file]
