@@ -14,9 +14,9 @@
 
 (def date-formatter (f/formatter "MM/dd/yyy"))
 
-;(def csv-file "/Users/toddroth/Downloads/Productivity.csv")
+(def csv-file "/Users/toddroth/Downloads/Productivity.csv")
 
-(def csv-file "/Users/developer/Desktop/Productivity.csv")
+;(def csv-file "/Users/developer/Desktop/Productivity.csv")
 
 (def entry-keys [:date :accession :exam :modality :site-code :rad :status])
 
